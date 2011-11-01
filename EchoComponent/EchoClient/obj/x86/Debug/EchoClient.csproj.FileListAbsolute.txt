@@ -1,0 +1,6 @@
+C:\Documents and Settings\Booger\Мои документы\Visual Studio 2010\Projects\EchoComponent\EchoClient\bin\Debug\EchoClient.exe.config
+C:\Documents and Settings\Booger\Мои документы\Visual Studio 2010\Projects\EchoComponent\EchoClient\bin\Debug\EchoClient.exe
+C:\Documents and Settings\Booger\Мои документы\Visual Studio 2010\Projects\EchoComponent\EchoClient\bin\Debug\EchoClient.pdb
+C:\Documents and Settings\Booger\Мои документы\Visual Studio 2010\Projects\EchoComponent\EchoClient\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Booger\Мои документы\Visual Studio 2010\Projects\EchoComponent\EchoClient\obj\x86\Debug\EchoClient.exe
+C:\Documents and Settings\Booger\Мои документы\Visual Studio 2010\Projects\EchoComponent\EchoClient\obj\x86\Debug\EchoClient.pdb
