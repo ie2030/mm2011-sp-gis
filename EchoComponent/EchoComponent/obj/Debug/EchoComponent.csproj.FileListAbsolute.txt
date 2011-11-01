@@ -1,0 +1,7 @@
+c:\documents and settings\booger\мои документы\visual studio 2010\Projects\EchoComponent\EchoComponent\obj\Debug\ResolveAssemblyReference.cache
+c:\documents and settings\booger\мои документы\visual studio 2010\Projects\EchoComponent\EchoComponent\bin\Debug\EchoComponent.dll
+c:\documents and settings\booger\мои документы\visual studio 2010\Projects\EchoComponent\EchoComponent\bin\Debug\EchoComponent.pdb
+c:\documents and settings\booger\мои документы\visual studio 2010\Projects\EchoComponent\EchoComponent\bin\Debug\IComponent.dll
+c:\documents and settings\booger\мои документы\visual studio 2010\Projects\EchoComponent\EchoComponent\bin\Debug\IComponent.pdb
+c:\documents and settings\booger\мои документы\visual studio 2010\Projects\EchoComponent\EchoComponent\obj\Debug\EchoComponent.dll
+c:\documents and settings\booger\мои документы\visual studio 2010\Projects\EchoComponent\EchoComponent\obj\Debug\EchoComponent.pdb
