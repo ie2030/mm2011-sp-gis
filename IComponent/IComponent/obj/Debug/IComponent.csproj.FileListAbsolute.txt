@@ -1,0 +1,5 @@
+c:\documents and settings\booger\мои документы\visual studio 2010\Projects\IComponent\IComponent\obj\Debug\ResolveAssemblyReference.cache
+c:\documents and settings\booger\мои документы\visual studio 2010\Projects\IComponent\IComponent\bin\Debug\IComponent.dll
+c:\documents and settings\booger\мои документы\visual studio 2010\Projects\IComponent\IComponent\bin\Debug\IComponent.pdb
+c:\documents and settings\booger\мои документы\visual studio 2010\Projects\IComponent\IComponent\obj\Debug\IComponent.dll
+c:\documents and settings\booger\мои документы\visual studio 2010\Projects\IComponent\IComponent\obj\Debug\IComponent.pdb
