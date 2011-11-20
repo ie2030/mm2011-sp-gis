@@ -1,0 +1,15 @@
+c:\users\bahka\documents\visual studio 2010\Projects\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\bahka\documents\visual studio 2010\Projects\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\obj\x86\Debug\MainWindow.g.cs
+c:\users\bahka\documents\visual studio 2010\Projects\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\obj\x86\Debug\App.g.cs
+c:\users\bahka\documents\visual studio 2010\Projects\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\obj\x86\Debug\GoogleMapsFlashInWpf_MarkupCompile.cache
+c:\users\bahka\documents\visual studio 2010\Projects\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\obj\x86\Debug\MainWindow.baml
+c:\users\bahka\documents\visual studio 2010\Projects\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\obj\x86\Debug\GoogleMapsFlashInWpf.g.resources
+c:\users\bahka\documents\visual studio 2010\Projects\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\obj\x86\Debug\GoogleMapsFlashInWpf.Properties.Resources.resources
+c:\users\bahka\documents\visual studio 2010\Projects\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\bahka\documents\visual studio 2010\Projects\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\bahka\documents\visual studio 2010\Projects\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\bin\Debug\GoogleMapsFlashInWpf.exe
+c:\users\bahka\documents\visual studio 2010\Projects\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\bin\Debug\GoogleMapsFlashInWpf.pdb
+c:\users\bahka\documents\visual studio 2010\Projects\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\bin\Debug\AxInterop.ShockwaveFlashObjects.dll
+c:\users\bahka\documents\visual studio 2010\Projects\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\obj\x86\Debug\GoogleMapsFlashInWpf.exe
+c:\users\bahka\documents\visual studio 2010\Projects\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\obj\x86\Debug\GoogleMapsFlashInWpf.pdb
+C:\Users\bahka\Documents\Visual Studio 2010\Projects\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\bin\Debug\Interop.ShockwaveFlashObjects.dll

@@ -1,0 +1,13 @@
+c:\users\bahka\documents\visual studio 2010\Projects\FlashAxLib\FlashAxLib\bin\Debug\FlashAxLib.dll
+c:\users\bahka\documents\visual studio 2010\Projects\FlashAxLib\FlashAxLib\bin\Debug\FlashAxLib.pdb
+c:\users\bahka\documents\visual studio 2010\Projects\FlashAxLib\FlashAxLib\bin\Debug\Interop.ShockwaveFlashObjects.dll
+c:\users\bahka\documents\visual studio 2010\Projects\FlashAxLib\FlashAxLib\bin\Debug\AxInterop.ShockwaveFlashObjects.dll
+c:\users\bahka\documents\visual studio 2010\Projects\FlashAxLib\FlashAxLib\obj\Debug\ResolveAssemblyReference.cache
+c:\users\bahka\documents\visual studio 2010\Projects\FlashAxLib\FlashAxLib\obj\Debug\Interop.ShockwaveFlashObjects.dll
+c:\users\bahka\documents\visual studio 2010\Projects\FlashAxLib\FlashAxLib\obj\Debug\AxInterop.ShockwaveFlashObjects.dll
+c:\users\bahka\documents\visual studio 2010\Projects\FlashAxLib\FlashAxLib\obj\Debug\FlashAxLib.csproj.ResolveComReference.cache
+c:\users\bahka\documents\visual studio 2010\Projects\FlashAxLib\FlashAxLib\obj\Debug\FlashAxLib.FlashAxControl.resources
+c:\users\bahka\documents\visual studio 2010\Projects\FlashAxLib\FlashAxLib\obj\Debug\GenerateResource.read.1.tlog
+c:\users\bahka\documents\visual studio 2010\Projects\FlashAxLib\FlashAxLib\obj\Debug\GenerateResource.write.1.tlog
+c:\users\bahka\documents\visual studio 2010\Projects\FlashAxLib\FlashAxLib\obj\Debug\FlashAxLib.dll
+c:\users\bahka\documents\visual studio 2010\Projects\FlashAxLib\FlashAxLib\obj\Debug\FlashAxLib.pdb
