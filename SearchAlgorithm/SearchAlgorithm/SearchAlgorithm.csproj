@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="FibonacciHeap.cs" />
     <Compile Include="GraphForAlgorithm.cs" />
+    <Compile Include="PointCoordinates.cs" />
     <Compile Include="SearchAlgorithm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
