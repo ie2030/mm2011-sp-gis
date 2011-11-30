@@ -16,10 +16,14 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <Label Margin="0,0,5,0" Grid.Column="0">Address:</Label>
             <TextBox Name="address" Grid.Column="1" KeyDown="TextBox_KeyDown"></TextBox>
             <Button Margin="5,0,0,0" Padding="10,0,10,0" Grid.Column="2" Click="Search_Click">Search</Button>
+            <Button Margin="5,0,0,0" Padding="10,0,10,0" Grid.Column="3" Click="paintSomeLine">DrawLine</Button>
+            <Button Margin="5,0,0,0" Padding="10,0,10,0" Grid.Column="4" Click="Clear_Click">ClearLine</Button>
         </Grid>
         <Border BorderThickness="1" BorderBrush="Blue" Grid.Row="1" Margin="5,5,5,5">
             <WindowsFormsHost Name="wfh">
