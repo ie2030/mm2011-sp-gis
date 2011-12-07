@@ -1,0 +1,7 @@
+H:\IntrovertIM_CSharp\ExternalInterfaceProxy\bin\Debug\ExternalInterfaceProxy.dll
+H:\IntrovertIM_CSharp\ExternalInterfaceProxy\bin\Debug\ExternalInterfaceProxy.pdb
+H:\IntrovertIM_CSharp\ExternalInterfaceProxy\bin\Debug\AxInterop.ShockwaveFlashObjects.dll
+H:\IntrovertIM_CSharp\ExternalInterfaceProxy\bin\Debug\Interop.ShockwaveFlashObjects.dll
+H:\IntrovertIM_CSharp\ExternalInterfaceProxy\obj\Debug\ResolveAssemblyReference.cache
+H:\IntrovertIM_CSharp\ExternalInterfaceProxy\obj\Debug\ExternalInterfaceProxy.dll
+H:\IntrovertIM_CSharp\ExternalInterfaceProxy\obj\Debug\ExternalInterfaceProxy.pdb

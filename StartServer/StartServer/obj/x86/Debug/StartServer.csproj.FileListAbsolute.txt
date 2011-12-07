@@ -18,3 +18,6 @@ F:\mm2011-sp-gis\StartServer\StartServer\bin\Debug\IComponent.dll
 F:\mm2011-sp-gis\StartServer\StartServer\bin\Debug\EchoComponent.pdb
 F:\mm2011-sp-gis\StartServer\StartServer\bin\Debug\IComponent.pdb
 F:\mm2011-sp-gis\StartServer\StartServer\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Source_Project\StartServer\StartServer\bin\Debug\StartServer.exe.config
+D:\Source_Project\StartServer\StartServer\obj\x86\Debug\StartServer.exe
+D:\Source_Project\StartServer\StartServer\obj\x86\Debug\StartServer.pdb
