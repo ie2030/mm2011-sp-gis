@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Xml;
 
 namespace Server
 {
@@ -23,7 +22,7 @@ namespace Server
                 {
                     component.start();
                 }
-                catch
+                catch 
                 {
                     Console.WriteLine("Error while starting " + component.GetType());
                     continue;

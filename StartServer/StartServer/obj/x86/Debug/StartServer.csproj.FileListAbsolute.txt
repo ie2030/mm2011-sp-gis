@@ -21,3 +21,10 @@ F:\mm2011-sp-gis\StartServer\StartServer\obj\x86\Debug\ResolveAssemblyReference.
 D:\Source_Project\StartServer\StartServer\bin\Debug\StartServer.exe.config
 D:\Source_Project\StartServer\StartServer\obj\x86\Debug\StartServer.exe
 D:\Source_Project\StartServer\StartServer\obj\x86\Debug\StartServer.pdb
+C:\Documents and Settings\Booger\Рабочий стол\StartServer\StartServer\bin\Debug\StartServer.exe.config
+C:\Documents and Settings\Booger\Рабочий стол\StartServer\StartServer\obj\x86\Debug\StartServer.exe
+C:\Documents and Settings\Booger\Рабочий стол\StartServer\StartServer\obj\x86\Debug\StartServer.pdb
+C:\Documents and Settings\Booger\Рабочий стол\StartServer\StartServer\bin\Debug\StartServer.exe
+C:\Documents and Settings\Booger\Рабочий стол\StartServer\StartServer\bin\Debug\StartServer.pdb
+C:\Documents and Settings\Booger\Рабочий стол\StartServer\StartServer\bin\Debug\IComponent.pdb
+C:\Documents and Settings\Booger\Рабочий стол\StartServer\StartServer\obj\x86\Debug\ResolveAssemblyReference.cache
