@@ -5,6 +5,11 @@ using System.Text;
 
 namespace Server
 {
+    interface IPointCoordinates
+    {
+
+    }
+
     class PointCoordinates
     {
         public double x;
