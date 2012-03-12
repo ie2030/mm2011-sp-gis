@@ -5,12 +5,6 @@ using System.Text;
 
 namespace Server
 {
-    public interface IGraphForAlgorithm
-    {
-        OnDataBase[] GiveMeIdPriorCrossroads(int id);
-        OnDataBase[] GiveMeId(int id);
-    }
-
 
     public class ZoneBorder // Границы одной зоны
     {
@@ -145,15 +139,5 @@ namespace Server
         Object, // Строение или любой объект вне дороги
         Road // Дорога
     } 
-
-
-
-
-    class GraphForAlgorithm : IGraphForAlgorithm
-    {
-
-    }
 }
 
-
-// Id1 Id2 time track prior koordinatid1 
