@@ -41,11 +41,6 @@ namespace Server
         }
     }
 
-    public class VertexAndArcOfGraph 
-    {
-        Vertex vertex[]
-    }
-
     public class Vertex 
     {
         public readonly int Id;
@@ -152,14 +147,7 @@ namespace Server
     } 
 
 
-    class OnDataBase
-    {
-        int id1;
-        int id2;
-        PointCoordinates id2Coordinates;
-        PriorityVertex id2Priority; 
-        TimeSpan time;
-    }
+
 
     class GraphForAlgorithm : IGraphForAlgorithm
     {
