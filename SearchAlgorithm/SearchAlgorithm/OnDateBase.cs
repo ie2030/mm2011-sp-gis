@@ -5,21 +5,27 @@ using System.Text;
 
 namespace Server
 {
-    class OnDataBase // Вытаскиваем данные из базы данных
+    static class OnDataBase // Вытаскиваем данные из базы данных
     {
-        public GiveMeVertex (int id)
+        public static VertexInDateBase GetVertex (int id)
         {
 
 
             return VertexInDateBase(id, );
         }
 
+        public static int GetMaxId ()
+        {
+
+        }
+
+
         /* так же здесь будут функции:
-         * GiveMeZone ()              - Дайте пожалуйста разметки зоны
-         * GiveMeVertex (id)          - Дайте пожалуйста Вершину с id таким то 
-         * GiveMeNearId (coordinates) - Дайте пожалуйста ближайшую вершину, а точнее её номер
-         * GiveMeMaxId ()             - Дайте пожалуйста максимальный номер для вершин
-         * GiveMeSoapAndRope ()       - Дайте пожалуйста мыло и веревку
+         * GetZone ()              - Дайте пожалуйста разметки зоны
+         * GetVertex (id)          - Дайте пожалуйста Вершину с id таким то 
+         * GetNearId (coordinates) - Дайте пожалуйста ближайшую вершину, а точнее её номер
+         * GetMaxId ()             - Дайте пожалуйста максимальный номер для вершин
+         * GetSoapAndRope ()       - Дайте пожалуйста мыло и веревку
         */
     }
 
@@ -67,7 +73,7 @@ namespace Server
 
             this.Id = id;
             this.WightArc = wightArc;
-            this.Track = track
+            this.Track = track;
         }
     }
 }
