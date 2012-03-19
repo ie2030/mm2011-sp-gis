@@ -6,6 +6,94 @@ using System.Text;
 namespace Server
 {
 
+    public class ArrayOfVertex // Массив возвращающий по idнику вершину
+    {
+        public ArrayOfVertex (int maxId)
+        {
+            if (maxId == null)
+            {
+                throw new ArgumentNullException();
+            }
+            if (maxId <= 0)
+            {
+                throw new ArgumentException();
+            }
+            this.array = new List<Vertex>(maxId);
+            this.maxId = maxId;
+        }
+
+        private int maxId;
+        private List<Vertex> array;
+
+        public void AddVertex (Vertex vertex) // Добавляет или перезаписывает вершину по id номеру
+        {
+            if (vertex == null)
+            {
+                throw new ArgumentNullException();
+            }
+            if (vertex.Id > maxId)
+            {
+                throw new Exception();
+            }
+
+            array.Insert(vertex.Id, vertex);
+        }
+
+        public Vertex ElementAt(int id)
+        {
+            return array.ElementAt(id);
+        }
+    }
+
+    public class Graph // Весь граф для алгоритма
+    {
+        int maxId = OnDataBase.GetMaxId();
+        ArrayOfVertex array;
+
+        public void Create()
+        {
+            array = new ArrayOfVertex(maxId);
+
+            Vertex firstVertex = CreateHelper(0);          
+        }
+
+        private Vertex CreateHelper(int id)
+        {
+            VertexInDateBase vertexInDateBase = OnDataBase.GetVertex(id);
+            Vertex vertex = ConvertVertix(vertexInDateBase);
+            array.AddVertex(vertex);
+            Vertex temp;
+
+            for (int i = 0; i < vertexInDateBase.Arcs.Length; i++)
+            {
+                temp = array.ElementAt(vertexInDateBase.Arcs[i].Id);
+                if (temp == null)
+                {
+                    // Добавляем новую вершину и потом дугу к ней
+                    vertex.AddArc(new Arc(CreateHelper(vertexInDateBase.Arcs[i].Id), vertexInDateBase.Arcs[i].WightArc, vertexInDateBase.Arcs[i].Track));
+                }
+                else
+                {
+                    // Добавляем только дугу
+                    vertex.AddArc(new Arc (temp, vertexInDateBase.Arcs[i].WightArc, vertexInDateBase.Arcs[i].Track));
+                }
+            }
+
+            return vertex;
+        }
+
+        private Vertex ConvertVertix(VertexInDateBase vertexInDateBase)
+        {
+            return new Vertex(vertexInDateBase.Id, vertexInDateBase.Coordinates, vertexInDateBase.Priority, 1); // Зону нужно исправить
+        }
+
+    }
+
+    public class GraphZone // Граф одной зоны. Реализация его будет выложена позже
+    {
+
+    }
+
     public class ZoneBorder // Границы одной зоны
     {
         public readonly PointCoordinates[] Vertex; // Вершины многоуголника соединяющиеся последовательно и первая с последней
@@ -35,7 +123,7 @@ namespace Server
         }
     }
 
-    public class Vertex 
+    public class Vertex
     {
         public readonly int Id;
         public readonly PointCoordinates Coordinates;
