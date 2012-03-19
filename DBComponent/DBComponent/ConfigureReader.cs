@@ -1,20 +1,25 @@
 ﻿using System.Configuration;
 using System.Xml;
-namespace DBComponent {
+using System.Collections.Generic;
 
-    class ConfigureReader : IConfigurationSectionHandler {
-        #region public methods        
+namespace DBComponent
+{
+    /// <summary>
+    /// Incapsulates the logic for getting database configuration 
+    /// </summary>
+    class ConfigureReader :IConfigurationSectionHandler
+    {
         /// <summary>
-        /// Read configuration and create connection to database
+        /// Reads configuration from config file
         /// </summary>
-        public object Create(object parent, object configContext, XmlNode section) {
-            DBServer.name = section.Attributes["name"].Value;
-            DBServer.login = section.Attributes["login"].Value;
-            DBServer.pass = section.Attributes["pass"].Value;
-            DBServer.server = section.Attributes["server"].Value;
-            DBServer.createConnection();
-            return null;
+        public object Create(object parent, object configContext, XmlNode section)
+        {
+            List<string> config = new List<string>();
+            config.Add(section.Attributes["server"].Value);
+            config.Add(section.Attributes["name"].Value);
+            config.Add(section.Attributes["login"].Value);
+            config.Add(section.Attributes["pass"].Value);
+            return config;
         }
-        #endregion
     }
 }

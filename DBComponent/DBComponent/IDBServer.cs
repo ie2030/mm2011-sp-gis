@@ -1,8 +1,10 @@
 ﻿using System.ServiceModel;
 
-namespace DBComponent {
+namespace DBComponent
+{
     [ServiceContract]
-    public interface IDBServer {
+    public interface IDBServer
+    {
         [OperationContract]
         Point getNearestPoint(Point curr);
     }

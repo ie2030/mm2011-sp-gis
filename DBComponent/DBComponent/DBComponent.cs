@@ -1,23 +1,25 @@
-﻿using System.Configuration;
-using Server;
+﻿using Server;
 using System.ServiceModel;
 
-namespace DBComponent {
+namespace DBComponent
+{
     /// <summary>
     /// Main class of component.
     /// </summary>
-    class DBComponent: IComponent {
-        ServiceHost host;
-
+    class DBComponent :IComponent
+    {
+        private ServiceHost host;
+        
         #region public methods
         /// <summary>
-        /// Starts component
+        /// Starts component.
         /// </summary>
-        public void start() {
-            ConfigurationSettings.GetConfig("database");
+        public void start()
+        {
             host = new ServiceHost(typeof(DBServer));
             host.Open();
         }
         #endregion
+
     }
 }
