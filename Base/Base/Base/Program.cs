@@ -4,50 +4,48 @@ using System.Linq;
 using System.Text;
 using System.Data.SqlClient;
 
-namespace Base {
-    class Program {
-        static SqlConnection connection;
-        static internal void createConnection() {
-            StringBuilder builder = new StringBuilder(@"Data Source=");
-            builder.Append(@".\SQLEXPRESS");
-            builder.Append(";Initial Catalog=");
-            builder.Append("SpbAddresses");
-            builder.Append(";Persist Security Info=True;User ID=");
-            builder.Append(@"B52\Yulia");
-            builder.Append(";Password=");
-            builder.Append("");
-            builder.Append(";Integrated Security=true;");
-            connection = new SqlConnection(builder.ToString());
-        }
-
-        public static void printDistricts(){
-            string query = "SELECT * FROM DISTRICTLIST";
-            SqlCommand command = new SqlCommand(query, connection);
-            connection.Open();
-            SqlDataReader reader = command.ExecuteReader();
-            while (reader.Read()) {
-                Console.Write(reader.GetInt32(0));
-                Console.WriteLine(" " + reader.GetSqlString(1).ToString());
-            }
-            connection.Close();
-        }
-
-        public static void printStreets() {
-            string query = "SELECT * FROM STREETLIST";
-            SqlCommand command = new SqlCommand(query, connection);
-            connection.Open();
-            SqlDataReader reader = command.ExecuteReader();
-            while (reader.Read()) {
-                Console.Write(reader.GetInt32(0));
-                Console.WriteLine(" " + reader.GetSqlString(1).ToString());
-            }
-            connection.Close();
-        }
-        static void Main(string[] args) {
-            createConnection();
-            printDistricts();
-            printStreets();
-            Console.ReadLine();
-        }
+namespace Base
+{
+    class Node
+    {
+        public float lat, lon;
+        public int id,prior, zone;
     }
+
+    class Address 
+    {
+        public int id, id_node, id_district, id_street, h_num;
+        char corp_num;
+        string corp_name;
+    }
+
+    class Dist 
+    {
+        public float dist,time;
+        public int id,id_1,id_2;
+    }
+
+    class District 
+    {
+        public string name;
+        public int id;
+    }
+
+    class DSConnection 
+    {
+        public int id, id_street, id_district;
+    }
+
+    class SName 
+    {
+        int id, id_node;
+        string name;
+    }
+
+    class Street 
+    {
+        public string name,type;
+        public int id;
+    }
+    
 }
