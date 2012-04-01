@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{AB20097D-5D92-41D9-9361-1CB8CAF00354}</ProjectGuid>
+    <ProjectGuid>{CB4E59E3-4222-47F5-84F7-B7BF10FAD581}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DBComponent</RootNamespace>
-    <AssemblyName>DBComponent</AssemblyName>
+    <RootNamespace>AlgorithmComponent</RootNamespace>
+    <AssemblyName>AlgorithmComponent</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,12 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DBComponent">
+      <HintPath>..\..\DBComponent\DBComponent\bin\Debug\DBComponent.dll</HintPath>
+    </Reference>
     <Reference Include="IComponent">
       <HintPath>..\..\IComponent\IComponent\bin\Debug\IComponent.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -45,15 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConfigureReader.cs" />
-    <Compile Include="DBComponent.cs" />
-    <Compile Include="DBServer.cs" />
-    <Compile Include="IDBServer.cs" />
-    <Compile Include="Point.cs" />
+    <Compile Include="AlgorithmComponent.cs" />
+    <Compile Include="AlgorithmServer.cs" />
+    <Compile Include="IAlgorithmServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="GoogleMaps.mxml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
