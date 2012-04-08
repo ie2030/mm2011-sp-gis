@@ -1,12 +1,12 @@
 ﻿using Server;
 using System.ServiceModel;
-
+using System;
 namespace AlgorithmComponent
 {
     /// <summary>
     /// Main class of component
     /// </summary>
-    public class AlgorithmComponent : IComponent
+    public class AlgorithmComponent :IComponent
     {
         ServiceHost host;
 

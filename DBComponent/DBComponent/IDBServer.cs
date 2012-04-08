@@ -6,6 +6,6 @@ namespace DBComponent
     public interface IDBServer
     {
         [OperationContract]
-        Point getNearestPoint(Point curr);
+        Node getNearestPoint(Node curr);
     }
 }

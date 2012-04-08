@@ -8,6 +8,6 @@ namespace AlgorithmComponent
     interface IAlgorithmServer
     {
         [OperationContract]
-        List<Point> getShortestPath(Point start, Point finish); 
+        List<Node> getShortestPath(Node start, Node finish); 
     }
 }

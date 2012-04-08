@@ -49,7 +49,7 @@
     <Compile Include="DBComponent.cs" />
     <Compile Include="DBServer.cs" />
     <Compile Include="IDBServer.cs" />
-    <Compile Include="Point.cs" />
+    <Compile Include="DataModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
