@@ -3,7 +3,7 @@
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
   xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
   xmlns:ax="clr-namespace:AxShockwaveFlashObjects;assembly=AxInterop.ShockwaveFlashObjects"
-  Title="Hosting Google Maps Flash API in a WPF .NET Application"
+  Title="Simple Client"
   Loaded="WindowLoaded" MinHeight="400" MinWidth="600">
     <Grid>
         <Grid.RowDefinitions>
@@ -14,16 +14,16 @@
         <Grid Margin="5,5,5,5" Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="44"/>
+                <ColumnDefinition Width="22" />
+                <ColumnDefinition Width="15*"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
-            <Label Margin="0,0,5,0" Grid.Column="0">Address:</Label>
-            <TextBox Name="address" Grid.Column="1" KeyDown="TextBox_KeyDown"></TextBox>
-            <Button Margin="5,0,0,0" Padding="10,0,10,0" Grid.Column="2" Click="Search_Click">Search</Button>
-            <Button Margin="5,0,0,0" Padding="10,0,10,0" Grid.Column="3" Click="paintSomeLine">DrawLine</Button>
-            <Button Margin="5,0,0,0" Padding="10,0,10,0" Grid.Column="4" Click="Clear_Click">ClearLine</Button>
+            <Button Margin="5,0,0,0" Padding="10,0,10,0" Grid.Column="5" Click="Clear_Click" HorizontalAlignment="Right" IsEnabled="True">Clear</Button>
+            <Button Margin="5,0,0,0" Padding="10,0,10,0" Grid.Column="4" Click="get_Path_Click" HorizontalAlignment="Right" IsEnabled="True">Get Path</Button>
+            <RadioButton Margin="5,0,0,0" Padding="10,0,10,0" Grid.Column="1" Content="Start"   Name="stButton" Checked="stButton_Checked" IsChecked="True" IsEnabled="False" />
+            <RadioButton Margin="5,0,0,0" Padding="10,0,10,0" Grid.Column="2" Content="Finish"  Name="fnButton" Checked="fnButton_Checked" Grid.ColumnSpan="2" IsEnabled="False" />
         </Grid>
         <Border BorderThickness="1" BorderBrush="Blue" Grid.Row="1" Margin="5,5,5,5">
             <WindowsFormsHost Name="wfh">
@@ -35,14 +35,6 @@
                 <ColumnDefinition Width="5*"/>
                 <ColumnDefinition Width="5*"/>
             </Grid.ColumnDefinitions>
-            <StackPanel Grid.Column="0" Orientation="Horizontal">
-                <TextBlock Margin="0,0,5,0">Lat:</TextBlock>
-                <TextBlock Name="lat"></TextBlock>
-            </StackPanel>
-            <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
-                <TextBlock Margin="0,0,5,0">Lng:</TextBlock>
-                <TextBlock Name="lng"></TextBlock>
-            </StackPanel>
         </Grid>
     </Grid>
 </Window>

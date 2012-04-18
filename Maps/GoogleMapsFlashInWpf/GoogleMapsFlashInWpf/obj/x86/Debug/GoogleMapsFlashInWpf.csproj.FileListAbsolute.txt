@@ -32,3 +32,23 @@ F:\Need to Post\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\obj\x86\Debug\Generate
 F:\Need to Post\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\obj\x86\Debug\GenerateResource.write.1.tlog
 F:\Need to Post\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\bin\Debug\GoogleMaps.swf
 F:\Need to Post\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\obj\x86\Debug\GoogleMapsFlashInWpf_Content.g.cs
+C:\Documents and Settings\Booger\Рабочий стол\mm2011-sp-gis\Maps\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\obj\x86\Debug\GoogleMapsFlashInWpf.exe
+C:\Documents and Settings\Booger\Рабочий стол\mm2011-sp-gis\Maps\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\obj\x86\Debug\GoogleMapsFlashInWpf.pdb
+C:\Documents and Settings\Booger\Рабочий стол\mm2011-sp-gis\Maps\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\bin\Debug\GoogleMaps.swf
+C:\Documents and Settings\Booger\Рабочий стол\mm2011-sp-gis\Maps\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\bin\Debug\GoogleMapsFlashInWpf.exe
+C:\Documents and Settings\Booger\Рабочий стол\mm2011-sp-gis\Maps\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\bin\Debug\GoogleMapsFlashInWpf.pdb
+C:\Documents and Settings\Booger\Рабочий стол\mm2011-sp-gis\Maps\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\bin\Debug\AxInterop.ShockwaveFlashObjects.dll
+C:\Documents and Settings\Booger\Рабочий стол\mm2011-sp-gis\Maps\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\bin\Debug\ExternalInterfaceProxy.dll
+C:\Documents and Settings\Booger\Рабочий стол\mm2011-sp-gis\Maps\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\bin\Debug\Interop.ShockwaveFlashObjects.dll
+C:\Documents and Settings\Booger\Рабочий стол\mm2011-sp-gis\Maps\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\bin\Debug\ExternalInterfaceProxy.pdb
+C:\Documents and Settings\Booger\Рабочий стол\mm2011-sp-gis\Maps\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Booger\Рабочий стол\mm2011-sp-gis\Maps\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\obj\x86\Debug\MainWindow.baml
+C:\Documents and Settings\Booger\Рабочий стол\mm2011-sp-gis\Maps\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\obj\x86\Debug\MainWindow.g.cs
+C:\Documents and Settings\Booger\Рабочий стол\mm2011-sp-gis\Maps\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\obj\x86\Debug\App.g.cs
+C:\Documents and Settings\Booger\Рабочий стол\mm2011-sp-gis\Maps\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\obj\x86\Debug\GoogleMapsFlashInWpf_Content.g.cs
+C:\Documents and Settings\Booger\Рабочий стол\mm2011-sp-gis\Maps\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\obj\x86\Debug\GoogleMapsFlashInWpf_MarkupCompile.cache
+C:\Documents and Settings\Booger\Рабочий стол\mm2011-sp-gis\Maps\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\obj\x86\Debug\GoogleMapsFlashInWpf.g.resources
+C:\Documents and Settings\Booger\Рабочий стол\mm2011-sp-gis\Maps\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\obj\x86\Debug\GoogleMapsFlashInWpf.Properties.Resources.resources
+C:\Documents and Settings\Booger\Рабочий стол\mm2011-sp-gis\Maps\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Booger\Рабочий стол\mm2011-sp-gis\Maps\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Booger\Рабочий стол\mm2011-sp-gis\Maps\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\bin\Debug\GoogleMapsFlashInWpf.exe.config

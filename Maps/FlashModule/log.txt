@@ -1,0 +1,6 @@
+Загрузка файла конфигурации J:\Flex SDK\frameworks\flex-config.xml
+C:\Documents and Settings\Booger\Рабочий стол\mm2011-sp-gis\Maps\FlashModule\GoogleMaps.mxml(86): Предупреждение: variable "i" не имеет определения типа.
+
+        for (var i = 0; i < points.length; i+=1) {
+
+C:\Documents and Settings\Booger\Рабочий стол\mm2011-sp-gis\Maps\FlashModule\GoogleMaps.swf (102360 байт)
