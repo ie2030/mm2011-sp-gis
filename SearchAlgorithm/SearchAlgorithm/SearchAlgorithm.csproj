@@ -43,12 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FibonacciHeap.cs" />
+    <Compile Include="Cap.cs" />
+    <Compile Include="Zone, Vertex, Arc\Arc.cs" />
     <Compile Include="GraphForAlgorithm.cs" />
-    <Compile Include="OnDateBase.cs" />
     <Compile Include="PointCoordinates.cs" />
     <Compile Include="SearchAlgorithm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Zone, Vertex, Arc\Area.cs" />
+    <Compile Include="Zone, Vertex, Arc\ShortestPathTree.cs" />
+    <Compile Include="Zone, Vertex, Arc\Vertex.cs" />
+    <Compile Include="Zone, Vertex, Arc\Zone.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
