@@ -30,10 +30,10 @@ namespace AlgorithmComponent
         /// </summary>
         public List<Node> getShortestPath(Node start, Node finish)
         {
-           int startID = database.getNearestPoint(start).id;
-           int finishID = database.getNearestPoint(finish).id;
-           dijkstra(startID, finishID);
-           return buildPath(startID, finishID);
+            int startID = database.getNearestPoint(start).id;
+            int finishID = database.getNearestPoint(finish).id;
+            dijkstra(startID, finishID);
+            return buildPath(startID, finishID);
         }
         #endregion
 

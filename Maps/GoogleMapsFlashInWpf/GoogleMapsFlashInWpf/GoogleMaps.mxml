@@ -36,6 +36,34 @@
     private var finishMarker : Marker;
     private var marker : Number; // start, finish = 0, 1		
 
+    private function setStart(lat : Number, lng : Number) : void{
+        var newLatLng : LatLng = new LatLng(lat, lng);
+        if (startMarker) map.removeOverlay(startMarker);
+        startMarker = new Marker(newLatLng,
+               new MarkerOptions({
+                strokeStyle: new StrokeStyle({color: 0x000000}),
+                fillStyle: new FillStyle({color: 0x0000ff, alpha: 0.8}),
+                radius: 12,
+                hasShadow: true
+            }));
+		map.addOverlay(startMarker);
+        map.setCenter(newLatLng, 14, MapType.NORMAL_MAP_TYPE);
+    }
+    
+    private function setFinish(lat : Number, lng : Number) : void{
+        var newLatLng : LatLng = new LatLng(lat, lng);
+        if (finishMarker) map.removeOverlay(finishMarker);
+        finishMarker = new Marker(newLatLng,
+               new MarkerOptions({
+                strokeStyle: new StrokeStyle({color: 0x000000}),
+                fillStyle: new FillStyle({color: 0xff0000, alpha: 0.8}),
+                radius: 12,
+                hasShadow: true
+            }));
+		map.addOverlay(finishMarker);
+        map.setCenter(newLatLng, 14, MapType.NORMAL_MAP_TYPE);
+    }
+
     private function onMapReady(event:Event):void {
         var centerLL : LatLng = new LatLng(59.939039, 30.315758);
         map.setCenter(centerLL, 14, MapType.NORMAL_MAP_TYPE);
@@ -46,10 +74,12 @@
 
         map.addEventListener(MapMouseEvent.CLICK, onMapClick);
 	
-	marker = 0;
-	ExternalInterface.addCallback("Drawline", drawPolyline);
+	    marker = 0;
+	    ExternalInterface.addCallback("Drawline", drawPolyline);
         ExternalInterface.addCallback("Clear", clear);
-	ExternalInterface.addCallback("SelectMarker", selectMarker);
+	    ExternalInterface.addCallback("SelectMarker", selectMarker);
+        ExternalInterface.addCallback("SetStart", setStart);
+        ExternalInterface.addCallback("SetFinish", setFinish);
     }
 
     private function empty():void {}

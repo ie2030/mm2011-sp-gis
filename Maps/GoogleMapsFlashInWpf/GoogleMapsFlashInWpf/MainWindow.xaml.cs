@@ -19,6 +19,8 @@ namespace GoogleMapsFlashInWpf
         {
             InitializeComponent();
             algorithm = new Services.AlgorithmServerClient();
+            database = new Database.DBServerClient();
+            streets = database.getStreets();
         }
 
         private void WindowLoaded(object sender, RoutedEventArgs e)
@@ -91,7 +93,7 @@ namespace GoogleMapsFlashInWpf
 
         private void fnButton_Checked(object sender, RoutedEventArgs e)
         {
-            if (proxy != null) 
+            if (proxy != null)
                 proxy.Call("SelectMarker", 1);
         }
 
@@ -105,13 +107,23 @@ namespace GoogleMapsFlashInWpf
             finish.lat = fnLat;
             finish.lon = fnLng;
             Services.Node[] path = algorithm.getShortestPath(start, finish);
-            Title = path.Length.ToString();
+            //Title = path.Length.ToString();
             ArrayList points = new ArrayList();
-            foreach (Services.Node point in path){
-                points.Add(new ArrayList(new double[2] {point.lat, point.lon}));
+            foreach (Services.Node point in path)
+            {
+                points.Add(new ArrayList(new double[2] { point.lat, point.lon }));
             }
             drawLine(points);
         }
 
+        private void setStartMarker(double lat, double lng)
+        {
+            proxy.Call("SetStart", lat, lng);
+        }
+
+        private void setFinishMarker(double lat, double lng)
+        {
+            proxy.Call("SetFinish", lat, lng);
+        }
     }
 }

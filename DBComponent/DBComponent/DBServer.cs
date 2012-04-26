@@ -2,6 +2,8 @@
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Collections.Generic;
+using System;
+
 namespace DBComponent
 {
     /// <summary>
@@ -31,21 +33,24 @@ namespace DBComponent
         }
 
         /// <summary>
-        /// Returns nearest point in database
+        /// Returns nearest point on road in database
         /// </summary>
         public Node getNearestPoint(Node curr)
         {
-            string latStr = curr.lat.ToString(), lngStr = curr.lon.ToString();
-            string commandStr = "SELECT TOP 1 * FROM NODES ORDER BY (NODES.lat - " +
-                latStr + ")*(NODES.lat - " + latStr + ") + (NODES.lon - " + lngStr +
-                ")*(NODES.lon - " + lngStr + ")";
-            SqlCommand command = new SqlCommand(commandStr, connection);
-            connection.Open();
-            SqlDataReader reader = command.ExecuteReader();
-            reader.Read();
-            Node res = new Node(reader.GetDouble(1), reader.GetDouble(2));
-            res.id = reader.GetInt32(0);
-            connection.Close();
+            List<Node> nodes = getNodes();
+            Node res = null;
+            double dist = double.MaxValue;
+            foreach (Node node in nodes)
+            {
+                if (node.prior == 0) 
+                    continue;
+                double currDist = countDist(curr, node);
+                if (currDist < dist)
+                {
+                    res = node;
+                    dist = currDist;
+                }
+            }
             return res;
         }
 
@@ -93,7 +98,6 @@ namespace DBComponent
         public Node getNode(int id)
         {
             string commandStr = "SELECT * FROM NODES WHERE id = " + id.ToString() + ";";
-
             SqlCommand command = new SqlCommand(commandStr, connection);
             connection.Open();
             SqlDataReader reader = command.ExecuteReader();
@@ -163,7 +167,73 @@ namespace DBComponent
             connection.Close();
             return res;
         }
+
+        public List<Street> getStreets()
+        {
+            string commandStr = "SELECT * FROM STREETLIST;";
+
+            SqlCommand command = new SqlCommand(commandStr, connection);
+            connection.Open();
+            SqlDataReader reader = command.ExecuteReader();
+
+            List<Street> res = new List<Street>();
+            while (reader.Read())
+            {
+                Street curr = new Street();
+                curr.id = reader.GetInt32(0);
+                curr.name = reader.GetString(1);
+                curr.type = reader.GetString(2);
+                res.Add(curr);
+            }
+            connection.Close();
+            return res;
+        }
+
+        public Node getNodeByAdress(Address addr)
+        {
+            string commandStr = String.Format("select * from NODES join ADDRESS on NODES.id = ADDRESS.id_node where ADDRESS.id_street = {0}", addr.id_street);
+            if (addr.h_num != -1)
+                commandStr += " and ADDRESS.h_num = " + addr.h_num.ToString();
+
+            SqlCommand command = new SqlCommand(commandStr, connection);
+            connection.Open();
+            SqlDataReader reader = command.ExecuteReader();
+
+            Node res = null;
+            if (reader.Read())
+            {
+                res = new Node(reader.GetDouble(1), reader.GetDouble(2));
+                res.id = reader.GetInt32(0);
+                try
+                {
+                    res.prior = reader.GetInt32(3);
+                }
+                catch { res.prior = 0; }
+                try
+                {
+                    res.zone = reader.GetInt32(4);
+                }
+                catch { res.zone = 0; }
+            }
+
+            connection.Close();
+            return res;
+        }
+
         #endregion
 
+        #region private methods
+        private double countDist(Node st, Node ed)
+        {
+            double toRad = Math.PI / 180;
+            double lat1 = st.lat * toRad, lng1 = st.lon * toRad, lat2 = ed.lat * toRad, lng2 = ed.lon * toRad;
+            double temp = Math.Sin((lat2 - lat1) / 2);
+            temp *= temp;
+            temp += Math.Cos(lat1) * Math.Cos(lat2) * Math.Sin((lng2 - lng1) / 2) * Math.Sin((lng2 - lng1) / 2);
+            temp = Math.Sqrt(temp);
+            temp = 2 * Math.Asin(temp);
+            return temp * 6372795;
+        }
+        #endregion
     }
 }

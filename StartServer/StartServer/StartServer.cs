@@ -22,9 +22,10 @@ namespace Server
                 {
                     component.start();
                 }
-                catch 
+                catch (Exception e)
                 {
                     Console.WriteLine("Error while starting " + component.GetType());
+                    Console.WriteLine(e.Message);
                     continue;
                 }
                 Console.WriteLine(component.GetType() + " is started");

@@ -1,4 +1,5 @@
 ﻿using System.ServiceModel;
+using System.Collections.Generic;
 
 namespace DBComponent
 {
@@ -7,5 +8,9 @@ namespace DBComponent
     {
         [OperationContract]
         Node getNearestPoint(Node curr);
+        [OperationContract]
+        List<Street> getStreets();
+        [OperationContract]
+        Node getNodeByAdress(Address addr);
     }
 }

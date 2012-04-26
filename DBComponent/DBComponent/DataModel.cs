@@ -20,12 +20,15 @@ namespace DBComponent
         [DataMember]
         public int id, prior, zone;
     }
-
-    class Address
+    [DataContract]
+    public class Address
     {
+        [DataMember]
         public int id, id_node, id_district, id_street, h_num;
-        char corp_num;
-        string corp_name;
+        [DataMember]
+        public char corp_num;
+        [DataMember]
+        public string corp_name;
     }
 
     public class Dist
@@ -51,9 +54,12 @@ namespace DBComponent
         string name;
     }
 
-    class Street
+    [DataContract]
+    public class Street
     {
+        [DataMember]
         public string name, type;
+        [DataMember]
         public int id;
     }
     
