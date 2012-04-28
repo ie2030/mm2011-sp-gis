@@ -83,12 +83,12 @@ namespace DBComponent
                 {
                     curr.prior = reader.GetInt32(3);
                 }
-                catch { }
+                catch { curr.prior = 0; }
                 try
                 {
                     curr.zone = reader.GetInt32(4);
                 }
-                catch { } 
+                catch { curr.zone = 0; } 
                 res.Add(curr);
             }
             connection.Close();
@@ -103,7 +103,7 @@ namespace DBComponent
             SqlDataReader reader = command.ExecuteReader();
 
             Node res = null;
-            while (reader.Read())
+            if (reader.Read())
             {
                 res = new Node(reader.GetDouble(1), reader.GetDouble(2));
                 res.id = reader.GetInt32(0);
@@ -111,12 +111,12 @@ namespace DBComponent
                 {
                     res.prior = reader.GetInt32(3);
                 }
-                catch { }
+                catch { res.prior = 0; }
                 try
                 {
                     res.zone = reader.GetInt32(4);
                 }
-                catch { }
+                catch { res.zone = 0; }
             }
             connection.Close();
             return res;

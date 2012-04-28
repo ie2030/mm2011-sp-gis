@@ -5,6 +5,8 @@ msbuild AlgorithmComponent\AlgorithmComponent\AlgorithmComponent.csproj
 msbuild StartServer\StartServer\StartServer.csproj
 
 :: Compile Client Part
+msbuild Maps\ExternalInterfaceProxy\ExternalInterfaceProxy.csproj
+msbuild Maps\FlashAxLib\FlashAxLib\FlashAxLib.csproj
 msbuild Maps\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf\GoogleMapsFlashInWpf.csproj
 
 pause
