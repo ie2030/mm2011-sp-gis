@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Globalization;
 using System.Xml;
 using System.IO;
 using System.Text;
@@ -150,7 +151,13 @@ namespace Flash.External
 			else if (value is Single || value is Double || value is int || value is uint)
 			{
 				writer.WriteStartElement("number");
-				writer.WriteString(value.ToString());
+                if (value is double)
+                {
+                    Double d = Convert.ToDouble(value);
+                    writer.WriteString(d.ToString(CultureInfo.InvariantCulture));
+                }
+                else
+			        writer.WriteString(value.ToString());
 				writer.WriteEndElement();
 			}
 			else if (value is ArrayList)
@@ -235,7 +242,7 @@ namespace Flash.External
 			if (reader.IsStartElement("number"))
 			{
 				reader.ReadStartElement("number");
-				double value = Double.Parse(reader.Value);
+				double value = Double.Parse(reader.Value, CultureInfo.InvariantCulture);
 				reader.Read();
 				reader.ReadEndElement();
 				return value;
