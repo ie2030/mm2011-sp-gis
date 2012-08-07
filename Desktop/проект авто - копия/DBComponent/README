@@ -1,0 +1,8 @@
+Component needs entry in app.config file:
+
+<database server="servername"
+          name="databasename"
+          login="login"
+          pass="pass" />
+
+Component will connect to that database
