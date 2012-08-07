@@ -1,0 +1,48 @@
+﻿<Window x:Class="GoogleMapsFlashInWpf.Window1"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+  xmlns:ax="clr-namespace:AxShockwaveFlashObjects;assembly=AxInterop.ShockwaveFlashObjects"
+  Title="Simple Client"
+  Loaded="WindowLoaded" MinHeight="400" MinWidth="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid Margin="5,5,5,5" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="314" />
+            </Grid.ColumnDefinitions>
+            <Button Margin="0,0,74,0" Padding="10,0,10,0" Grid.Column="6" Click="Clear_Click" HorizontalAlignment="Right" IsEnabled="True">Clear</Button>
+            <Button Padding="10,0,10,0" Grid.Column="6" Click="get_Path_Click" HorizontalAlignment="Right" IsEnabled="True">Get Path</Button>
+            <RadioButton Margin="5,0,0,0" Padding="10,0,10,0" Grid.Column="0" Content="Start"   Name="stButton" Checked="stButton_Checked" IsChecked="True" IsEnabled="False" />
+            <RadioButton Margin="5,0,0,0" Padding="10,0,10,0" Grid.Column="1" Content="Finish"  Name="fnButton" Checked="fnButton_Checked"  IsEnabled="False" />
+            <TextBox Margin="0,0,0,1" Padding="10,0,10,0" Grid.Column="2" Name="adress" HorizontalAlignment="Right" MinWidth="150">Enter Address Here</TextBox>
+            <Button Margin="95,0,131,0" Padding="10,0,10,0" Grid.Column="6" Name="addressButton" Click="parseAddress" IsEnabled="True" >Find Address</Button>
+            <ComboBox Grid.Column="6" Height="15" HorizontalAlignment="Left" Margin="4,20,0,0" Name="comboBox1" VerticalAlignment="Top" Width="89" DataContext="{Binding}" DisplayMemberPath="Count path with selected algorithm" IsReadOnly="True" ItemStringFormat="Count path with selected algorithm" Text="Count path with selected algorithm" SelectionChanged="comboBox1_SelectionChanged">
+                <ComboBoxItem Content="Dijkstra" />
+                <ComboBoxItem Content="Levit" />
+            </ComboBox>
+            <Label Content="Choose algorithm" Height="28" HorizontalAlignment="Left" Margin="1,-5,0,0" Name="label1" VerticalAlignment="Top" Grid.Column="6" Width="92" FontSize="10" />
+        </Grid>
+        <Border BorderThickness="1" BorderBrush="Blue" Grid.Row="1" Margin="5,5,5,5">
+            <WindowsFormsHost Name="wfh">
+                <ax:AxShockwaveFlash x:Name="axFlash"/>
+            </WindowsFormsHost>
+        </Border>
+        <Grid Margin="5,5,5,5" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+    </Grid>
+</Window>

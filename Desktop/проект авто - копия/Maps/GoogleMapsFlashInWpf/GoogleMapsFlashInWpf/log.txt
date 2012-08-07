@@ -1,0 +1,2 @@
+Error occurred during initialization of VM
+Unable to load native library: Can't find dependent libraries
