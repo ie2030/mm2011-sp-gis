@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute">
+
+<maps:Map xmlns:maps="com.google.maps.*"
+    id="map"
+    mapevent_mapready="onMapReady(event)"
+    width="100%"
+    height="100%"
+    sensor="false"
+    key="ABQIAAAA6Je9wEhpps-6h4SLEzfx0hQcnJAsAPU0edVn7hFTQC8ea3A_VBRkCS6mZzjo_25VBG1y_bIKsYiRMg" />
+
+<mx:Script>
+<![CDATA[
+    import com.google.maps.services.ClientGeocoderOptions;
+    import com.google.maps.overlays.Marker;
+    import com.google.maps.overlays.Polyline;
+    import com.google.maps.overlays.PolylineOptions;
+    import com.google.maps.controls.MapTypeControl;
+    import com.google.maps.controls.PositionControl;
+    import com.google.maps.controls.ZoomControl;
+    import com.google.maps.InfoWindowOptions;
+    import com.google.maps.MapMouseEvent;
+    import com.google.maps.services.ClientGeocoder;
+    import com.google.maps.services.GeocodingEvent;
+    import com.google.maps.LatLng;
+    import com.google.maps.Map;
+    import com.google.maps.MapEvent;
+    import com.google.maps.MapType;
+    import com.google.maps.styles.StrokeStyle;
+    import mx.controls.Alert;
+
+    private var marker : Marker;
+    private var line : Polyline;
+
+    private function onMapReady(event:Event):void {
+        var centerLL : LatLng = new LatLng(59.939039, 30.315758);
+        map.setCenter(centerLL, 14, MapType.NORMAL_MAP_TYPE);
+
+        map.addControl(new ZoomControl());
+        map.addControl(new PositionControl());
+        map.addControl(new MapTypeControl());
+
+        map.addEventListener(MapMouseEvent.CLICK, onMapClick);
+
+        marker = new Marker(centerLL);
+        map.addOverlay(marker);
+
+        ExternalInterface.addCallback("Search", onSearch);
+        ExternalInterface.addCallback("Drawline", drawPolyline);
+        ExternalInterface.addCallback("Clearline", clearLine);
+        ExternalInterface.call("setPosition", marker.getLatLng().lat(), marker.getLatLng().lng());
+    }
+
+    private function empty():void {}
+
+    private function onMapClick(event:MapMouseEvent):void {
+        marker.setLatLng(event.latLng);
+        ExternalInterface.call("setPosition", marker.getLatLng().lat(), marker.getLatLng().lng());
+    }
+
+    private function onSearch(address:String):void {
+        var geocoder : ClientGeocoder = new ClientGeocoder();
+
+        geocoder.addEventListener(GeocodingEvent.GEOCODING_SUCCESS,
+            function(event: GeocodingEvent):void{
+                var placemarks:Array = event.response.placemarks;
+                if (placemarks.length > 1){
+                    map.setCenter(placemarks[0].point);
+                    marker.setLatLng(placemarks[0].point);
+                    ExternalInterface.call("setPosition", marker.getLatLng().lat(), marker.getLatLng().lng());
+
+                }
+            });
+        geocoder.addEventListener(GeocodingEvent.GEOCODING_FAILURE,
+            function(event: GeocodingEvent):void {
+                Alert.show("Geocoding failed");
+            });
+        geocoder.geocode(address);
+    }
+
+    private function drawPolyline(points:Array):void {
+        if (points.length < 2) return;
+        if (line) map.removeOverlay(line);
+        var latlng : Array = new Array();
+        for (var i = 0; i < points.length; i+=1) {
+            latlng.push(new LatLng(points[i][0], points[i][1]));
+        }
+        line = new Polyline(latlng,
+              new PolylineOptions({
+              strokeStyle: new StrokeStyle({
+              color: 0xFF0000,
+              thickness: 4,
+              alpha: 0.7})
+          }));
+        map.addOverlay(line);
+    }
+
+    private function clearLine(): void {
+        if (line) map.removeOverlay(line);
+        line = null;
+    }
+
+
+]]>
+</mx:Script>
+</mx:Application>
